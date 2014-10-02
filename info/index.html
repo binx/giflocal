@@ -1,0 +1,39 @@
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+    <div class="wrapper">
+    	<h1><a href="../">gif.local</a></h1>
+    	<div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+        
+        <div class="body-copy">
+            <img src="../photos/IMG_0717.jpg">
+            <p>LittleNets, part of Eyebeam-Off-The-Grid, is a show of alternative networks, offering different ways of being and making online, curated by <a href="http://lifewinning.com/">Ingrid Burrington</a>. Rather than wire Eyebeam's temporary Governor's Island space with internet access, we decided to set up some site-specific mesh networks with things that might be useful to have on a remote island--simple communication tools, artworks, and games. Visitors to the island can view and contribute content to these networks. We'll also be hosting workshops and events to teach people about different kinds of networks and how to build them.</p>
+            <p>As the free and open web becomes increasingly concentrated and opaque in the hands of a few companies, the networks of LittleNets suggest that another net (or a multitude of nets) is still possible.</p>
+            <img src="../photos/IMG_0726.jpg">
+            <img src="../photos/IMG_0767.jpg">            
+            <img src="../photos/IMG_0770.jpg">
+        </div>
+
+        <div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+
+        <div class="footer info">
+            <a class="button" href="../list">list of artists</a>
+            <a href="../artists" class="button artist-button">rand(artwork)</a>
+        </div>
+
+    </div>
+
+    <script>
+
+        $(".artist-button").attr("href","../artists/#artists/"+
+            (Math.floor(Math.random()*20))
+        );
+
+        var w = $(".footer").width();
+        $(".footer").css("width",w).css("display","block");
+		
+    </script>
+</body>

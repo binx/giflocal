@@ -1,0 +1,48 @@
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+    <div class="wrapper">
+    	<h1><a href="../">gif.local</a></h1>
+    	<div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+    	<div class="artists"></div>
+        <div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+
+        <div class="footer list">
+            <a href="" class="button artist-button">rand(artwork)</a>
+            <a class="button" href="../info">more info</a>
+        </div>
+    </div>
+
+    <script>
+
+		$.ajax({
+			url: "../artists.json"
+		}).done(function(artists) {
+		  	artists.forEach(function(d,i){
+                appendArtist(d, i);
+            });
+		});
+
+        var list = $(".artists");
+
+    	function appendArtist(artist, i) {
+            var a = $("<div>").attr("class","artist-list");
+            a.append($("<a>").attr("class","title")
+                .attr("href","../artists/#artists/"+i)
+                .text(artist.title));
+            a.append($("<a>").attr("class","name").attr("href",artist.url).attr("target","_blank").text(artist.name));
+            a.append($("<div>").attr("class","date").text(artist.date));
+            list.append(a);
+    	}
+
+        var w = $(".footer").width() + 1;
+        $(".footer").css("width",w).css("display","block");
+
+        $(".artist-button").attr("href","../artists/#artists/"+
+            (Math.floor(Math.random()*20))
+        );
+    </script>
+</body>

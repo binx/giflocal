@@ -1,0 +1,30 @@
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body class="index">
+    <div class="wrapper">
+
+    	<h1>gif.local</h1>
+    	<div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+
+        <div class="body-copy">
+            <p><b>gif.local</b> is an art exhibit curated by <a href="rachelbinx.com">Rachel Binx</a>, that ran from Sept 6-28th 2014 on Governor's Island, NYC. This exhibit was part of the <a href="http://eyebeam.org/events/littlenets">LittleNets</a> exhibition, which was put on through <a href="http://eyebeam.org/">Eyebeam</a>.</p>
+            <p>The idea behind gif.local was to build a setting where gif art could be properly displayed and appreciated. By distributing the gallery "display" onto visitors' devices, we hope to create a space where viewers can have the time and personal space to consider each piece of art. So take some time, wander through these gifs, and see how far the gif medium has come. </p>
+        </div>
+        <a href="/list" class="button"><span>list of artists</span></a>
+        <a class="button artist-button"><span>rand(artwork)</span></a>
+        <a href="/info" class="button"><span>more info</span></a>
+
+        <div class="bg">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</div>
+
+    </div>
+
+    <script>
+
+        $(".artist-button").attr("href","/artists/#artists/"+
+            (Math.floor(Math.random()*20)));
+		
+    </script>
+</body>
